@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <p>{{titulo}}</p>
+        <!-- <input type="text" name="" v-bind:value="titulo"
+            v-on:input="titulo = $event.target.value"> <! bind do framework para o html , e do html para o framework -->
+        <input type="text" name="teste" v-model="titulo"> <!-- two way data-bind-->
+    </div>
+    
+</body>
+</html>
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            titulo: 'Usando Vue js'
+        }
+    })
+</script>
