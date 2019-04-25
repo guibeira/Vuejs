@@ -1,0 +1,47 @@
+#efeito {
+	width: 100px;
+	height: 100px;
+	border: 1px solid black;
+}
+
+.destaque {
+	background-color: red;
+	width: 200px !important;
+}
+
+.encolher {
+	background-color: gray;
+	width: 50px !important;
+}
+.spinner {
+	text-align: center;
+	animation-name: spin, depth;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+	animation-duration: 3s;
+  }
+  @keyframes spin {
+	from { transform: rotateY(0deg); }
+	to { transform: rotateY(-360deg); }
+  }
+  @keyframes depth {
+	0% { text-shadow: 0 0 black; }
+	25% { text-shadow: 1px 0 black, 2px 0 black, 3px 0 black, 4px 0 black, 5px 0 black; }
+	50% { text-shadow: 0 0 black; }
+	75% { text-shadow: -1px 0 black, -2px 0 black, -3px 0 black, -4px 0 black, -5px 0 black; }
+	100% { text-shadow: 0 0 black; }
+  }
+  .fundoClaro {
+	  background-color: aqua; 
+  }
+  .barra-progresso {
+	  height: 30px;
+	  width: 500px;
+	  border: 1px solid #000;
+  }
+  .progresso {
+	  background-color: red;
+	  height: 100%;
+  }
+
+  
