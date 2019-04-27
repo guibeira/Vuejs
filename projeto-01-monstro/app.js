@@ -17,8 +17,8 @@ new Vue({
             this.monsterLife = 100
         },
         attack(special) {
-            this.hurt('playerLife', 5, 10, false)
-            this.hurt('monsterLife', 7, 12, special)
+            this.hurt('playerLife', 7, 12, false)
+            this.hurt('monsterLife', 5, 10, special)
         },
         hurt(atr, min, max, special){
             const plus = special ? 5 : 0
@@ -29,6 +29,14 @@ new Vue({
         getRandom(min, max) {
             const value = Math.random() * (max - min) + min
             return Math.round(value)
+        },
+        healAndHurt(){
+            this.heal(10, 15)
+            this.hurt('playerLife', 7, 12, false)
+        },
+        heal(min, max){
+            const heal = this.getRandom(min, max)
+            this.playerLife = Math.min(this.playerLife+ heal , 100)
         }
     },
     watch: {
