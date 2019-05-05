@@ -8,15 +8,20 @@
     <title>Document</title>
 </head>
 <body>
-    <div id="app">
-        <contador></contador>
-        <contador></contador>
+    <div id="app1">
+        <contador1></contador1>
+        <contador1></contador1>
+    </div>
+    <hr>
+    <div id="app2">
+        <app-contador></app-contador>
+        <app-contador></app-contador>
     </div>
 </body>
 </html>
 <script>
-    // registro global, qualquer vue instance terá acesso
-    Vue.component('contador', {
+    
+    const contador = {
         template: `
         <div>
                 <span>{{ contador }}</span>
@@ -29,9 +34,24 @@
                 contador: 0
             }
         }
+    }
+
+    
+  
+    new Vue({
+        el: "#app1",
+        //registro local
+        components : {
+            contador1: contador
+        }
+    
     })
     new Vue({
-        el: "#app",
+        el: "#app2",
+        //registro local
+        components : {
+            'app-contador': contador
+        }
     
     })
 </script>
