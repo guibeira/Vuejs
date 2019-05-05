@@ -1,14 +1,13 @@
 <template>
-  <h1>{{ contadores }}</h1>
+  <div id="app">
+    <h1>Contadores</h1>
+    <app-contador></app-contador>
+  </div>
 </template>
 
 <script>
 export default {
-  data(){
-    return {
-      contadores: 0
-    }
-  }
+  
 }
 </script>
 
