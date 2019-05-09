@@ -25,15 +25,13 @@
 		<v-content>
 			<carrosel></carrosel>
 		</v-content>
-
-		<v-footer class="pa-3" app>
-			<v-spacer></v-spacer>
-			<div>Curso Vue &copy; {{ new Date().getFullYear() }}</div>
-		</v-footer>
+		<app-footer></app-footer>
 	</v-app>
 </template>
 
 <script>
+import Footer from './components/template/Footer.vue'
 export default {
+	components : {'app-footer': Footer}
 }
 </script>
