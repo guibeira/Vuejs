@@ -8,7 +8,7 @@
         <div class="componentes">
             <app-usuario-info :nome="nome"
             @nomeMudou="nome = $event.novo"/>
-            <app-usuario-editar />
+            <app-usuario-editar :idade="idade" />
         </div>
     </div>
 </template>
