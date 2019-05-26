@@ -36,7 +36,7 @@ export default {
         }
     },
     created(){
-        barramento.$on('idadeMudou', (idade) =>{
+        barramento.quadoIdadeMudar(idade=>{
             this.idade = idade
         })
     }
