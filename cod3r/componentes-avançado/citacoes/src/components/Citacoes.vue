@@ -5,7 +5,7 @@
             <button @click="numero++">&gt;</button>
         </span>
         <citacao>
-            <p>{{citacoes[indice].autor}}</p>
+            <h1>{{citacoes[indice].autor}}</h1>
             <p>{{citacoes[indice].texto}}</p>
             <h6>{{citacoes[indice].fonte}}</h6>
         </citacao>
@@ -47,5 +47,8 @@ export default {
         display: flex;
         flex-direction: column;
         align-items: center;
+    }
+    h1 {
+        color: green;
     }
 </style>
