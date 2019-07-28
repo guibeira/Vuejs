@@ -8,6 +8,7 @@
 </template>
 
 <script>
+import barramento from '@/barramento'
 export default {
     props: {
         // nome: [String, Array] pode-se passar vários tipos
@@ -33,6 +34,11 @@ export default {
                 antigo: antigo,
             })
         }
+    },
+    created(){
+        barramento.quadoIdadeMudar(idade=>{
+            this.idade = idade
+        })
     }
 }
 </script>

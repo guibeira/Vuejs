@@ -6,8 +6,16 @@
 </template>
 
 <script>
+import barramento from '@/barramento'
+
 export default {
-    
+    props: ['idade'],
+    methods: {
+        alterarIdade(){
+            this.idade = 33
+            barramento.alterarIdade(this.idade)
+        }
+    }
 }
 </script>
 
