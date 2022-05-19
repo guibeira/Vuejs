@@ -10,19 +10,22 @@
 </head>
 
 <body>
-  <div id="app1">
-    <h1>{{ aula }}</h1>
-    <h2>{{ modulo }}</h2>
-    <button @click="alterarAula">Alterar</button>
-    <button @click="alterarModulo">Alterar</button>
+  <div id="app">
   </div>
 </body>
 
 </html>
 
 <script>
-  const vm1 = new Vue({
-    el: '#app1',
+  const vm = new Vue({
+    template: `
+      <div>
+        <h1>{{ aula }}</h1>
+        <h2>{{ modulo }}</h2>
+        <button @click="alterarAula">Alterar</button>
+        <button @click="alterarModulo">Alterar</button>
+      </div>
+      `,
     data: {
       aula: 'Aula: Montando Instancia Vue',
       modulo: 'Teste 1'
@@ -37,4 +40,5 @@
 
     }
   })
+  vm.$mount('#app')
 </script>
